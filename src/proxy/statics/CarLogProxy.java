@@ -20,11 +20,11 @@ public class CarLogProxy implements proxy.Movable {
     @Override
     public void move() {
 
-        System.out.println("日志开始......");
+        System.out.println("日志开始");
 
         movable.move();
 
-        System.out.println("日志结束......");
+        System.out.println("日志结束");
 
     }
 }

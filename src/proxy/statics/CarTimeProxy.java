@@ -21,13 +21,11 @@ public class CarTimeProxy implements proxy.Movable {
     public void move() {
 
         long startTime = System.currentTimeMillis();
-        System.out.println("汽车开始行驶......");
+        System.out.println("汽车开始行驶，计时");
 
         movable.move();
 
         long endTime = System.currentTimeMillis();
-        System.out.println("汽车结束行驶......");
-        System.out.println("汽车行驶时间：" + (endTime - startTime) + "毫秒！");
-
+        System.out.println("汽车结束行驶，行驶时间：" + (endTime - startTime) + "毫秒！");
     }
 }

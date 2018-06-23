@@ -7,8 +7,8 @@ import java.lang.reflect.Proxy;
 
 /**
  * Created by wangshiyi on 17/6/26.
- * <p>
- * JDK动态代理
+ *
+ * JDK动态代理：不需要在设计实现的时候就指定某一个代理类来代理哪一个被代理对象，把这种指定延迟到程序运行时由JVM来实现
  */
 
 public class TestDynamicProxy {

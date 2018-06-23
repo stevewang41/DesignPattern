@@ -31,18 +31,17 @@ public class MyInvocationHandler implements InvocationHandler {
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         long startTime = System.currentTimeMillis();
-        System.out.println("汽车开始行驶......");
+        System.out.println("汽车开始行驶，计时");
 
-        System.out.println("日志开始......");
+        System.out.println("日志开始");
 
         // 通过反射以target作为主调来执行method方法，也就是调用被代理对象的method方法
         Object result = method.invoke(target, args);
 
-        System.out.println("日志结束......");
+        System.out.println("日志结束");
 
         long endTime = System.currentTimeMillis();
-        System.out.println("汽车结束行驶......");
-        System.out.println("汽车行驶时间：" + (endTime - startTime) + "毫秒！");
+        System.out.println("汽车结束行驶，行驶时间：" + (endTime - startTime) + "毫秒！");
 
         return result;
     }
