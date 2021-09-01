@@ -12,7 +12,7 @@ package singleton;
 public class Singleton5 {
 
     private static class SingletonHolder {
-        private static Singleton5 instance = new Singleton5();  // 利用Java类动态加载机制实现延迟实例化
+        private static final Singleton5 INSTANCE = new Singleton5();  // 利用Java类动态加载机制实现延迟实例化
     }
 
     private Singleton5() {
@@ -20,6 +20,6 @@ public class Singleton5 {
     }
 
     public static Singleton5 getInstance() {
-        return SingletonHolder.instance;
+        return SingletonHolder.INSTANCE;
     }
 }

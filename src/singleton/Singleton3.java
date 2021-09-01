@@ -19,7 +19,7 @@ public class Singleton3 {
 
     public static Singleton3 getInstance() {
         if (instance == null) {
-            synchronized (Singleton3.class) {   // 只有第一次会同步
+            synchronized (Singleton3.class) {   // 只会在未实例化时获取同步锁
                 if (instance == null) {
                     instance = new Singleton3();
                 }

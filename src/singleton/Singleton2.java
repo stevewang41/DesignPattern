@@ -18,7 +18,7 @@ public class Singleton2 {
     }
 
     public static synchronized Singleton2 getInstance() {
-        if (instance == null) {     // 只有第一次同步是有用的，以后的每一次同步都是累赘
+        if (instance == null) {     // 只有在未实例化时获取同步锁是必要的，完成实例化之后每次获取同步锁都会产生不必要的开销
             instance = new Singleton2();
         }
         return instance;
